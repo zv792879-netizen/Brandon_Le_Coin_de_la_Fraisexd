@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos | Le Coin de la Fraise</title>
+    <link rel="stylesheet" href="CSS/Pedidos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+<div class="container-principal">
+    <!-- MENÚ LATERAL -->
+    <aside class="sidebar">
+        <div class="logo-sidebar">
+            <img src="IMG/logo.png" alt="Logo">
+        </div>
+        <nav class="nav-sidebar">
+            <a href="Inicio.html"><i class="fas fa-home"></i> Inicio</a>
+
+            <!-- Opción con submenú -->
+            <div class="menu-item-con-submenu">
+                <a href="#" class="menu-principal">
+                    <i class="fas fa-utensils"></i> Nuestro Menú
+                    <i class="fas fa-chevron-down submenu-flecha"></i>
+                </a>
+                <div class="submenu">
+                    <a href="MenuFresas.html">Fresas con Crema</a>
+                    <a href="MenuCrepas.html">Crepas</a>
+                </div>
+            </div>
+
+            <a href="Pedidos.html"><i class="fas fa-receipt"></i> Pedidos</a>
+            <a href="Nosotros.html"><i class="fas fa-info-circle"></i> ¿Quiénes Somos?</a>
+            <a href="Registro.html"><i class="fas fa-user-plus"></i> Registrarse</a>
+        </nav>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+        <header class="header-principal">
+            <div class="logo-header">
+                <img src="IMG/logo.png" alt="Logo Le Coin de la Fraise">
+                <h1>Le Coin de la Fraise</h1>
+            </div>
+        </header>
+
+        <!-- SECCIÓN DE PEDIDOS -->
+        <section class="pedidos-section">
+            <h2 class="section-titulo"><i class="fas fa-shopping-cart"></i> Realiza tu Pedido</h2>
+            <p class="section-subtitulo">Elige tus fresas con crema o crepas favoritas</p>
+
+            <!-- SECCIÓN 1: FRESAS CON CREMA -->
+            <div class="seccion-productos">
+                <div class="seccion-header">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Fresas con Crema</h3>
+                    <div class="seccion-linea"></div>
+                </div>
+                
+                <div class="productos-grid" id="productosFresas">
+                    <!-- Producto 1 - Fresas con crema -->
+                    <div class="producto-card" data-id="1" data-nombre="Fresas con Crema 12onz" data-precio="2.00" data-categoria="fresas">
+                        <div class="producto-img">
+                            <img src="IMG/fresa 12.png" alt="Fresas con Crema" onerror="this.src='https://placehold.co/200x200/F5CED9/E88AA8?text=🍓'">
+                        </div>
+                        <h4>Fraise á la Creme 12onz</h4>
+                        <p>Fresas frescas con crema batida y un toque de vainilla</p>
+                        <div class="producto-precio">$2.00</div>
+                        <button class="btn-agregar" onclick="agregarAlCarrito(1, 'Fraise á la Creme 12onz', 2.00)">
+                            <i class="fas fa-cart-plus"></i> Agregar
+                        </button>
+                    </div>
+                    <!-- Producto 2 - Fresas con chocolate -->
+                    <div class="producto-card" data-id="2" data-nombre="Chocofraise 12onz" data-precio="2.00" data-categoria="fresas">
+                        <div class="producto-img">
+                            <img src="IMG/choco 12.png" alt="Fresas con Chocolate 12onz" onerror="this.src='https://placehold.co/200x200/F5CED9/E88AA8?text=🍫🍓'">
+                        </div>
+                        <h4>Chocofraise 12onz</h4>
+                        <p>Fresas frescas con crema batida bañadas con chocolate liquido</p>
+                        <div class="producto-precio">$2.00</div>
+                        <button class="btn-agregar" onclick="agregarAlCarrito(2, 'Chocofraise 12onz', 2.00)">
+                            <i class="fas fa-cart-plus"></i> Agregar
+                        </button>
+                    </div>
+                    <!-- Producto 3 - Fresas con Caramelo -->
+                    <div class="producto-card" data-id="3" data-nombre="Fresas con Caramelo 12onz" data-precio="2.00" data-categoria="fresas">
+                        <div class="producto-img">
+                            <img src="IMG/Caramelo 12.png" alt="Fresas con Caramelo 12onz" onerror="this.src='https://placehold.co/200x200/F5CED9/E88AA8?text=✨🍓'">
+                        </div>
+                        <h4>Délice Caramélisé 12onz</h4>
+                        <p>Fresas frescas con crema batida bañadas con caramelo liquido</p>
+                        <div class="producto-precio">$2.00</div>
+                        <button class="btn-agregar" onclick="agregarAlCarrito(3, 'Délice Caramélisé 12onz', 2.00)">
+                            <i class="fas fa-cart-plus"></i> Agregar
+                        </button>
+                    </div>
+                    <!-- Producto 4 - Fresas con Oreo -->
+                    <div class="producto-card" data-id="4" data-nombre="Fresas con Oreo 12onz" data-precio="2.00" data-categoria="fresas">
+                        <div class="producto-img">
+                            <img src="IMG/Oreo 12.png" alt="Fresas con Oreo 12onz" onerror="this.src='https://placehold.co/200x200/F5CED9/E88AA8?text=🥥🍓'">
+                        </div>
+                        <h4>Fraiséo 12onz</h4>
+                        <p>Fresas frescas con crema batida y galleta oreo</p>
+                        <div class="producto-precio">$2.00</div>
+                        <button class="btn-agregar" onclick="agregarAlCarrito(4, 'Fraiséo 12onz', 2.00)">
+                            <i class="fas fa-cart-plus"></i> Agregar
+                        </button>
+                    </div>
+
+                    <!-- Producto 1 - Fresas con crema -->
+                    <div class="producto-card" data-id="1" data-nombre="Fresas con Crema 8onz" data-precio="1.50" data-categoria="fresas">
+                        <div class="producto-img">
+                            <img src="IMG/fresas.png" alt="Fresas con Crema 8onz" onerror="this.src='https://placehold.co/200x200/F5CED9/E88AA8?text=🍓'">
+                        </div>
+                        <h4>Fraise á la Creme 8onz</h4>
+                        <p>Fresas frescas con crema batida y un toque de vainilla</p>
+                        <div class="producto-precio">$1.50</div>
+                        <button class="btn-agregar" onclick="agregarAlCarrito(1, 'Fraise á la Creme 8onz', 1.50)">
+                            <i class="fas fa-cart-plus"></i> Agregar
+                        </button>
+                    </div>
+                    <!-- Producto 2 - Fresas con chocolate -->
+                    <div class="producto-card" data-id="2" data-nombre="Chocofraise 8onz" data-precio="1.50" data-categoria="fresas">
+                        <div class="producto-img">
+                            <img src="IMG/chocolate.png" alt="Fresas con Chocolate 8onz" onerror="this.src='https://placehold.co/200x200/F5CED9/E88AA8?text=🍫🍓'">
+                        </div>
+                        <h4>Chocofraise 8onz</h4>
+                        <p>Fresas frescas con crema batida bañadas con chocolate liquido</p>
+                        <div class="producto-precio">$1.50</div>
+                        <button class="btn-agregar" onclick="agregarAlCarrito(2, 'Chocofraise 8onz', 1.50)">
+                            <i class="fas fa-cart-plus"></i> Agregar
+                        </button>
+                    </div>
+                    <!-- Producto 3 - Fresas con Caramelo -->
+                    <div class="producto-card" data-id="3" data-nombre="Fresas con Caramelo 8onz" data-precio="1.50" data-categoria="fresas">
+                        <div class="producto-img">
+                            <img src="IMG/caramelo.png" alt="Fresas con Caramelo 8onz" onerror="this.src='https://placehold.co/200x200/F5CED9/E88AA8?text=✨🍓'">
+                        </div>
+                        <h4>Délice Caramélisé 8onz</h4>
+                        <p>Fresas frescas con crema batida bañadas con caramelo liquido</p>
+                        <div class="producto-precio">$1.50</div>
+                        <button class="btn-agregar" onclick="agregarAlCarrito(3, 'Délice Caramélisé 8onz', 1.50)">
+                            <i class="fas fa-cart-plus"></i> Agregar
+                        </button>
+                    </div>
+                    <!-- Producto 4 - Fresas con Oreo -->
+                    <div class="producto-card" data-id="4" data-nombre="Fresas con Oreo 8onz" data-precio="1.50" data-categoria="fresas">
+                        <div class="producto-img">
+                            <img src="IMG/oreso.png" alt="Fresas con Oreo 80nz" onerror="this.src='https://placehold.co/200x200/F5CED9/E88AA8?text=🥥🍓'">
+                        </div>
+                        <h4>Fraiséo 8onz</h4>
+                        <p>Fresas frescas con crema batida y galleta oreo</p>
+                        <div class="producto-precio">$1.50</div>
+                        <button class="btn-agregar" onclick="agregarAlCarrito(4, 'Fraiséo 8onz', 1.50)">
+                            <i class="fas fa-cart-plus"></i> Agregar
+                        </button>
+                    </div>
+
+                    <!-- Producto 1 - Fresas con crema -->
+                    <div class="producto-card" data-id="1" data-nombre="Fresas con Crema 5onz" data-precio="1.00" data-categoria="fresas">
+                        <div class="producto-img">
+                            <img src="IMG/fresa 5.png" alt="Fresas con Crema 5onz" onerror="this.src='https://placehold.co/200x200/F5CED9/E88AA8?text=🍓'">
+                        </div>
+                        <h4>Fraise á la Creme 5onz</h4>
+                        <p>Fresas frescas con crema batida y un toque de vainilla</p>
+                        <div class="producto-precio">$1.00</div>
+                        <button class="btn-agregar" onclick="agregarAlCarrito(1, 'Fraise á la Creme 5onz', 1.00)">
+                            <i class="fas fa-cart-plus"></i> Agregar
+                        </button>
+                    </div>
+                    <!-- Producto 2 - Fresas con chocolate -->
+                    <div class="producto-card" data-id="2" data-nombre="Chocofraise 5onz" data-precio="1.00" data-categoria="fresas">
+                        <div class="producto-img">
+                            <img src="IMG/choco 5.png" alt="Fresas con Chocolate 5onz" onerror="this.src='https://placehold.co/200x200/F5CED9/E88AA8?text=🍫🍓'">
+                        </div>
+                        <h4>Chocofraise 5onz</h4>
+                        <p>Fresas frescas con crema batida bañadas con chocolate liquido</p>
+                        <div class="producto-precio">$1.00</div>
+                        <button class="btn-agregar" onclick="agregarAlCarrito(2, 'Chocofraise 5onz', 1.00)">
+                            <i class="fas fa-cart-plus"></i> Agregar
+                        </button>
+                    </div>
+                    <!-- Producto 3 - Fresas con Caramelo -->
+                    <div class="producto-card" data-id="3" data-nombre="Fresas con Caramelo 5onz" data-precio="1.00" data-categoria="fresas">
+                        <div class="producto-img">
+                            <img src="IMG/caramelo 5.png" alt="Fresas con Caramelo 5onz" onerror="this.src='https://placehold.co/200x200/F5CED9/E88AA8?text=✨🍓'">
+                        </div>
+                        <h4>Délice Caramélisé 5onz</h4>
+                        <p>Fresas frescas con crema batida bañadas con caramelo liquido</p>
+                        <div class="producto-precio">$1.00</div>
+                        <button class="btn-agregar" onclick="agregarAlCarrito(3, 'Délice Caramélisé 5onz', 1.00)">
+                            <i class="fas fa-cart-plus"></i> Agregar
+                        </button>
+                    </div>
+                    <!-- Producto 4 - Fresas con Oreo -->
+                    <div class="producto-card" data-id="4" data-nombre="Fresas con Oreo 5onz" data-precio="1.00" data-categoria="fresas">
+                        <div class="producto-img">
+                            <img src="IMG/oreo 5.png" alt="Fresas con Oreo 5onz" onerror="this.src='https://placehold.co/200x200/F5CED9/E88AA8?text=🥥🍓'">
+                        </div>
+                        <h4>Fraiséo 5onz</h4>
+                        <p>Fresas frescas con crema batida y galleta oreo</p>
+                        <div class="producto-precio">$1.00</div>
+                        <button class="btn-agregar" onclick="agregarAlCarrito(4, 'Fraiséo 5onz', 1.00)">
+                            <i class="fas fa-cart-plus"></i> Agregar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 2: CREPAS -->
+            <div class="seccion-productos">
+                <div class="seccion-header">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Crepas</h3>
+                    <div class="seccion-linea"></div>
+                </div>
+                <div class="productos-grid" id="productosCrepas">
+                    <!-- Producto 5 - Crepa de Fresa -->
+                    <div class="producto-card" data-id="5" data-nombre="Crepa de Fresa" data-precio="1.50" data-categoria="crepas">
+                        <div class="producto-img">
+                            <img src="IMG/crepafresa.png" alt="Crepa de Fresa" onerror="this.src='https://placehold.co/200x200/F5CED9/E88AA8?text=🥞🍓'">
+                        </div>
+                        <h4>Crêpe Fraise & Banane</h4>
+                        <p>Crepa suave rellena de fresas con babano y crema batida</p>
+                        <div class="producto-precio">$1.50</div>
+                        <button class="btn-agregar" onclick="agregarAlCarrito(5, 'Crêpe Fraise & Banane', 1.50)">
+                            <i class="fas fa-cart-plus"></i> Agregar
+                        </button>
+                    </div>
+                    <!-- Producto 6 - Crepa de Chocolate -->
+                    <div class="producto-card" data-id="6" data-nombre="Crepa de Chocolate" data-precio="1.50" data-categoria="crepas">
+                        <div class="producto-img">
+                            <img src="IMG/chococrepa.png" alt="Crepa de Chocolate" onerror="this.src='https://placehold.co/200x200/F5CED9/E88AA8?text=🍫🥞'">
+                        </div>
+                        <h4>Choco Rêve</h4>
+                        <p>Crepa con nutella, fresas frescas y crema batida</p>
+                        <div class="producto-precio">$1.50</div>
+                        <button class="btn-agregar" onclick="agregarAlCarrito(6, 'Choco Rêve', 1.50)">
+                            <i class="fas fa-cart-plus"></i> Agregar
+                        </button>
+                    </div>
+                    <!-- Producto 7 - Crepa de Carameo -->
+                    <div class="producto-card" data-id="7" data-nombre="Crepa de Caramelo" data-precio="1.50" data-categoria="crepas">
+                        <div class="producto-img">
+                            <img src="IMG/caramele.png" alt="Crepa de Caramelo" onerror="this.src='https://placehold.co/200x200/F5CED9/E88AA8?text=🥛🥞'">
+                        </div>
+                        <h4>Douce Caramele</h4>
+                        <p>Crepa bañada en caramelo con fresas picadas y crema batida</p>
+                        <div class="producto-precio">$1.50</div>
+                        <button class="btn-agregar" onclick="agregarAlCarrito(7, 'Douce Caramele', 1.50)">
+                            <i class="fas fa-cart-plus"></i> Agregar
+                        </button>
+                    </div>
+                    <!-- Producto 8 - Crepa de Oreo -->
+                    <div class="producto-card" data-id="8" data-nombre="Crepa de Oreo" data-precio="1.50" data-categoria="crepas">
+                        <div class="producto-img">
+                            <img src="IMG/oreocrepe.png" alt="Crepa de Oreo" onerror="this.src='https://placehold.co/200x200/F5CED9/E88AA8?text=👑🥞'">
+                        </div>
+                        <h4>Choco Êclipse</h4>
+                        <p>Crepa de oreo con fresas y crema batida</p>
+                        <div class="producto-precio">$1.50</div>
+                        <button class="btn-agregar" onclick="agregarAlCarrito(8, 'Choco Êclipse', 1.50)">
+                            <i class="fas fa-cart-plus"></i> Agregar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARRITO DE COMPRAS -->
+            <div class="carrito-container">
+                <h3><i class="fas fa-shopping-bag"></i> Tu Pedido</h3>
+                <div class="carrito-vacio" id="carritoVacioMsg">
+                    <i class="fas fa-shopping-basket"></i>
+                    <p>Tu carrito está vacío</p>
+                    <p class="vacio-sub">Agrega productos para continuar</p>
+                </div>
+                <div class="carrito-lleno" id="carritoLleno">
+                    <table class="carrito-tabla">
+                        <thead>
+                            <tr><th>Producto</th><th>Cantidad</th><th>Precio</th><th>Subtotal</th><th></th></tr>
+                        </thead>
+                        <tbody id="carritoBody"></tbody>
+                    </table>
+                    <div class="carrito-total">
+                        <span>Total a pagar:</span>
+                        <span id="totalCarrito">$0.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FORMULARIO DE DATOS DEL CLIENTE -->
+            <div class="formulario-cliente-ancho">
+                <h3><i class="fas fa-user"></i> Datos para la factura y entrega</h3>
+                <div class="formulario-grid">
+                    <div class="input-group">
+                        <label><i class="fas fa-user-circle"></i> Nombre completo</label>
+                        <input type="text" id="nombreCliente" required placeholder="Nombre Completo">
+                    </div>
+                    <div class="input-group">
+                        <label><i class="fas fa-envelope"></i> Correo electrónico</label>
+                        <input type="email" id="emailCliente" required placeholder="@email.com">
+                    </div>
+                    <div class="input-group">
+                        <label><i class="fas fa-map-marker-alt"></i> Dirección de entrega</label>
+                        <textarea id="direccionCliente" rows="2" required placeholder="Dirección completa"></textarea>
+                    </div>
+                    <div class="input-group">
+                        <label><i class="fas fa-phone"></i> Teléfono</label>
+                        <input type="tel" id="telefonoCliente" required placeholder="+503 0000 0000">
+                    </div>
+                </div>
+                <div class="boton-confirmar-wrapper">
+                    <button class="btn-confirmar" id="btnConfirmarPedido">
+                        <i class="fas fa-check-circle"></i> Confirmar Pedido y Enviar Factura
+                    </button>
+                    <button class="btn-vaciar" onclick="vaciarCarrito()">
+                        <i class="fas fa-trash-alt"></i> Vaciar carrito
+                    </button>
+                </div>
+            </div>
+
+            <!-- MODAL DE FACTURA -->
+            <div class="modal-factura" id="modalFactura">
+                <div class="modal-contenido">
+                    <div class="modal-header">
+                        <h3><i class="fas fa-file-invoice"></i> Factura de Pedido</h3>
+                        <button class="modal-cerrar" onclick="cerrarModal()">&times;</button>
+                    </div>
+                    <div class="modal-body" id="modalBodyFactura"></div>
+                    <div class="modal-footer">
+                        <button class="btn-cerrar-modal" onclick="cerrarModal()">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer-redisenado">
+            <div class="footer-contenido-arriba">
+                <div class="footer-container">
+                    <div class="footer-columna footer-columna-info">
+                        <h3><i class="fas fa-crown"></i> Le Coin de la Fraise</h3>
+                        <p>El rincón más dulce de la ciudad</p>
+                        <p>Fresas con cremas artesanales</p>
+                        <p>desde 2026</p>
+                    </div>
+                    <div class="footer-columna footer-columna-sucursales">
+                        <h3>Nuestras Sucursales</h3>
+                        <p><i class="fas fa-location-dot"></i>Plaza Mundo Apopa, Carr. Troncal del Norte Km 12, Apopa</p>
+                        <p><i class="fas fa-location-dot"></i>Ciudad Delgado Carretera Troncal del Norte Km 6/5, Ciudad Delgado</p>
+                    </div>
+                    <div class="footer-columna footer-columna-redes">
+                        <h3>Síguenos</h3>
+                        <div class="redes-sociales-footer">
+                            <a href="https://wa.me/50372887854?text=¡Hola!%20Me%20gustaría%20ordenar%20unas%20fresas%20con%20crema" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                            <a href="https://www.facebook.com/share/1c9cbcK5gX/" aria-label="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+                            <a href="https://www.instagram.com/le_coin_de_la_fraise?igsh=Z292ZjJ0dDlyNTkz" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                        </div>
+                    </div>
+                    <div class="footer-columna footer-columna-contacto">
+                        <h3>Contacto</h3>
+                        <p><i class="fas fa-envelope"></i> elrincondelasfresas@gmail.com</p>
+                        <p><i class="fas fa-phone-alt"></i> +503 7288-7854</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-mensaje">
+                <p class="mensaje-texto">🍓Fresas con crema • Hecho con amor • ¡Dulzura en cada bocado!🍓</p>
+                <p class="mensaje-autor">© 2026 Le Coin de la Fraise - Todos los derechos reservados</p>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<script src="JS/Pedidos.js"></script>
+</body>
+</html>
