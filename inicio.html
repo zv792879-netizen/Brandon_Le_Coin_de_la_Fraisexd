@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Coin de la Fraise | Fresas & Delicias</title>
+    <link rel="stylesheet" href="CSS/inicio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="container-principal">
+    <!-- MENÚ LATERAL (SIDEBAR) NUEVO -->
+    <aside class="sidebar">
+        <div class="logo-sidebar">
+            <img src="IMG/logo.png" alt="Logo">
+        </div>
+        <nav class="nav-sidebar">
+            <a href="Inicio.html"><i class="fas fa-home"></i> Inicio</a>
+            
+            <!-- Opción con submenú -->
+            <div class="menu-item-con-submenu">
+                <a href="#" class="menu-principal">
+                    <i class="fas fa-utensils"></i> Nuestro Menú
+                    <i class="fas fa-chevron-down submenu-flecha"></i>
+                </a>
+                <div class="submenu">
+                    <a href="MenuFresas.html">Fresas con Crema</a>
+                    <a href="MenuCrepas.html"> Crepas</a>
+                </div>
+            </div>
+
+            <a href="Pedidos.html"><i class="fas fa-receipt"></i> Pedidos</a>
+            <a href="Nosotros.html"><i class="fas fa-info-circle"></i> ¿Quiénes Somos?</a>
+            <a href="Registro.html"><i class="fas fa-user-plus"></i> Registrarse</a>
+        </nav>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+        <!-- ENCABEZADO SUPERIOR -->
+        <header class="header-principal">
+            <div class="logo-header">
+                <img src="IMG/logo.png" alt="Logo">
+                <h1>Le Coin de la Fraise</h1>
+            </div>
+        </header>
+
+        <!-- ========== CARRUSEL ========== -->
+        <section class="carousel-section" id="inicio">
+            <div class="carousel-container">
+                <div class="carousel-slides">
+                    <div class="slide active">
+                        <img src="IMG/crepafresa.png" alt="Crepa de fresa">
+                        <div class="slide-caption">
+                            <h2>Crêpe Fraise & Banane</h2>
+                            <p>Crepa suave rellena de fresas con babano y crema batida.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="IMG/fresa con crema.png" alt="Crepas de caramelo">
+                        <div class="slide-caption">
+                            <h2>Fraise á la Creme</h2>
+                            <p>Fresas frescas con crema batida y un toque de bainilla.</p>
+                        </div>
+                    </div>
+                        <div class="slide">
+                        <img src="IMG/caramele.png" alt="Crepas de caramelo">
+                        <div class="slide-caption">
+                            <h2>Douce Caramele</h2>
+                            <p>Crepa bañada en caramelo con fresas picadas y crema batida.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="IMG/fresa con caramelo.png" alt="Fresa con caramelo">
+                        <div class="slide-caption">
+                            <h2>Délice Caraélisé</h2>
+                            <p>Fresas frescas con crema batida bañadas con caramelo liquido.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="IMG/chococrepa.png" alt="Crepa de chocolate">
+                        <div class="slide-caption">
+                            <h2>Choco Rêve</h2>
+                            <p>Crepa con nutella, fresas frescas y crema batida.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="IMG/fresachoco.jpg" alt="Fresas de chocolate">
+                        <div class="slide-caption">
+                            <h2>Chocofraise</h2>
+                            <p>Fresas frescas con crema batida bañadas con chocolate liquido.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
+                <button class="carousel-btn next" id="nextBtn">&#10095;</button>
+                <div class="carousel-dots" id="dotsContainer"></div>
+            </div>
+        </section>
+
+        <!-- ========== TARJETAS DE INFORMACIÓN ========== -->
+        <section class="info" id="informacion">
+            <div class="card">
+                <h2>Nuestros Productos</h2>
+                <p>Descubre nuestra variedad de postres y productos artesanales elaborados con fresas frescas.</p>
+            </div>
+            <div class="card">
+                <h2>Información</h2>
+                <p>Conoce promociones, horarios y novedades. ¡Síguenos en redes sociales!</p>
+            </div>
+            <div class="card">
+                <h2>Servicios</h2>
+                <p>Atención personalizada para todos nuestros clientes. Eventos y pedidos especiales.</p>
+            </div>
+        </section>
+
+        <!-- ========== SECCIÓN NUESTROS FAVORITOS ========== -->
+        <section class="favoritos" id="menu">
+            <div class="container-favoritos">
+                <h2 class="titulo-seccion">🍓Nuestros Favoritos🍓</h2>
+                <p class="subtitulo-seccion">Los más pedidos por nuestros clientes</p>
+                <div class="productos-grid">
+                    <div class="producto-card">
+                        <div class="producto-imagen">
+                            <img src="IMG/fresa con crema.png" alt="Fresas con Crema">
+                        </div>
+                        <h3>Fraise á la Creme</h3>
+                        <p class="producto-descripcion">Fresas frescas con crema batida y un toque de vainilla</p>
+                        <button class="btn-ver-mas" href="MenuFresas.html">Ver más</button>
+                    </div>
+                    <div class="producto-card">
+                        <div class="producto-imagen">
+                            <img src="IMG/chococrepa.png" alt="Crepa con Chocolate">
+                        </div>
+                        <h3>Choco Rêve</h3>
+                        <p class="producto-descripcion">Crepa con Nutella, fresas frescas y crema batida</p>
+                        <button class="btn-ver-mas" href="MenuCrepas.html">Ver más</button>
+                    </div>
+                    <div class="producto-card">
+                        <div class="producto-imagen">
+                            <img src="IMG/fresa con caramelo.png" alt="fresas con caramelo">
+                        </div>
+                        <h3>Délice Caramélisé</h3>
+                        <p class="producto-descripcion">Fresas frescas con crema batida bañadas con caramelo liquido</p>
+                        <button class="btn-ver-mas" href="MenuFresas.html">Ver más</button>
+                    </div>
+                    <div class="producto-card">
+                        <div class="producto-imagen">
+                            <img src="IMG/caramele.png" alt="Crepa con caramelo">
+                        </div>
+                        <h3>Douce Caramele</h3>
+                        <p class="producto-descripcion">Crepa bañada en caramelo con fresas picadas y crema batida</p>
+                        <button class="btn-ver-mas" href="MenuCrepas.html">Ver más</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SECCIÓN ¿POR QUÉ ELEGIRNOS? (NOSOTROS) ========== -->
+        <section class="porque-elegirnos" id="nosotros">
+            <div class="container-porque">
+                <h2 class="titulo-seccion">✨ ¿Por qué elegirnos?✨</h2>
+                <p class="subtitulo-seccion">Razones que nos hacen diferentes</p>
+                <div class="razones-grid">
+                    <div class="razon-card">
+                        <div class="razon-icono">🍓</div>
+                        <h3>Fresas 100% Frescas</h3>
+                        <p>Seleccionamos las fresas mas frescas para brindarte un sabor natural</p> 
+                    </div>
+                    <div class="razon-card">
+                        <div class="razon-icono">❤️</div>
+                        <h3>Con Amor en Cada Detalle</h3>
+                        <p>Cada postre es una experiencia especial elaborada con dedicación</p>
+                    </div>
+                    <div class="razon-card">
+                        <div class="razon-icono">🧁</div>
+                        <h3>Variedad de Sabres Para Todos los Gustos</h3>
+                        <p>Desde lo mas clásico has las conbinaciones más innovadoras</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== FOOTER NUEVO ========== -->
+        <footer class="footer-redisenado">
+            <div class="footer-contenido-arriba">
+                <div class="footer-container">
+                    <div class="footer-columna footer-columna-info">
+                        <h3><i class="fas fa-crown"></i> Le Coin de la Fraise</h3>
+                        <p>El rincón más dulce de la ciudad</p>
+                        <p>Fresas con cremas artesanales</p>
+                        <p>desde 2026</p>
+                    </div>
+
+                    <div class="footer-columna footer-columna-sucursales">
+                        <h3>Nuestras Sucursales</h3>
+                        <p><i class="fas fa-location-dot"></i> Plaza Mundo Apopa, Carr. Troncal del Norte Km 12, Apopa</p>
+                        <p><i class="fas fa-location-dot"></i> Ciudad Delgado Carretera Troncal del Norte Km 6/5, Ciudad Delgado</p>
+                    </div>
+
+                    <div class="footer-columna footer-columna-redes">
+                        <h3>Síguenos</h3>
+                        <div class="redes-sociales-footer">
+                            <a href="https://wa.me/50372887854?text=¡Hola!%20Me%20gustaría%20ordenar%20unas%20fresas%20con%20crema" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                            <a href="https://www.facebook.com/share/1c9cbcK5gX/" aria-label="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+                            <a href="https://www.instagram.com/le_coin_de_la_fraise?igsh=Z292ZjJ0dDlyNTkz" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-columna footer-columna-contacto">
+                        <h3>Contacto</h3>
+                        <p><i class="fas fa-envelope"></i> elrincondelasfresas@gmail.com</p>
+                        <p><i class="fas fa-phone-alt"></i> +503 7288-7854</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-mensaje">
+                <p class="mensaje-texto">🍓Fresas con crema • Hecho con amor • ¡Dulzura en cada bocado!🍓</p>
+                <p class="mensaje-autor">— Le Coin de la Fraise</p>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<script src="JS/inicio.js"></script>
+</body>
+</html>
