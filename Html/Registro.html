@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Coin de la Fraise | Registro de Clientes</title>
+    <link rel="stylesheet" href="CSS/Reegistro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="container-principal">
+    <!-- MENÚ LATERAL (SIDEBAR) - Contiene los vínculos a otras páginas -->
+    <aside class="sidebar">
+        <div class="logo-sidebar">
+            <img src="IMG/logo.png" alt="Logo">
+        </div>
+        <nav class="nav-sidebar">
+            <a href="Inicio.html"><i class="fas fa-home"></i> Inicio</a>
+                        
+            <!-- Opción con submenú -->
+            <div class="menu-item-con-submenu">
+                <a href="#" class="menu-principal">
+                    <i class="fas fa-utensils"></i> Nuestro Menú
+                    <i class="fas fa-chevron-down submenu-flecha"></i>
+                </a>
+                <div class="submenu">
+                    <a href="MenuFresas.html">Fresas con Crema</a>
+                    <a href="MenuCrepas.html">Crepas</a>
+                </div>
+            </div>
+
+            <a href="Pedidos.html"><i class="fas fa-receipt"></i> Pedidos</a>
+            <a href="Nosotros.html"><i class="fas fa-info-circle"></i> ¿Quiénes Somos?</a>
+            <a href="Registro.html" class="active"><i class="fas fa-user-plus"></i> Registrarse</a>
+        </nav>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL - SOLO PÁGINA DE REGISTRO -->
+    <main class="main-content">
+        <!-- ENCABEZADO SUPERIOR -->
+        <header class="header-principal">
+            <div class="logo-header">
+                <img src="IMG/logo.png" alt="Logo Le Coin de la Fraise">
+                <h1>Le Coin de la Fraise</h1>
+            </div>
+        </header>
+
+        <!-- ========== SECCIÓN DE REGISTRO DE CLIENTES ========== -->
+        <section class="contenido-registro">
+            <div class="registro-container">
+                <div class="registro-header">
+                    <i class="fas fa-user-plus"></i>
+                    <h2>Registro de Clientes</h2>
+                    <p>¡Regístrate y recibe información de nuestras promociones!</p>
+                </div>
+
+                <form id="registroForm" class="registro-form">
+                    <div class="form-group">
+                        <label for="nombre"><i class="fas fa-user"></i> Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej: María González" required>
+                        <small class="error-message" id="error-nombre"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                        <small class="error-message" id="error-email"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono"><i class="fas fa-phone-alt"></i> Teléfono / WhatsApp</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Ej: 7288-7854" required>
+                        <small class="error-message" id="error-telefono"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="direccion"><i class="fas fa-map-marker-alt"></i> Dirección</label>
+                        <input type="text" id="direccion" name="direccion" placeholder="Ej: Colonia Las Flores, Casa #12" required>
+                        <small class="error-message" id="error-direccion"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="intereses"><i class="fas fa-heart"></i> ¿Qué productos te interesan?</label>
+                        <select id="intereses" name="intereses">
+                            <option value="Fresas con crema">🍓 Fresas con crema</option>
+                            <option value="Batidos de fresa">✨ Crepas</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje"><i class="fas fa-comment"></i> Mensaje adicional (opcional)</label>
+                        <textarea id="mensaje" name="mensaje" rows="3" placeholder="Déjanos un mensaje..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-registro" id="btnRegistro">
+                        <i class="fas fa-paper-plane"></i> Registrarse
+                    </button>
+                </form>
+
+                <div id="mensajeExito" class="mensaje-exito" style="display: none;">
+                    <i class="fas fa-check-circle"></i>
+                    <p>¡Registro exitoso! Te enviaremos un correo de confirmación.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer-redisenado">
+            <div class="footer-contenido-arriba">
+                <div class="footer-container">
+                    <div class="footer-columna footer-columna-info">
+                        <h3><i class="fas fa-crown"></i> Le Coin de la Fraise</h3>
+                        <p>El rincón más dulce de la ciudad</p>
+                        <p>Fresas con cremas artesanales</p>
+                        <p>desde 2026</p>
+                    </div>
+
+                    <div class="footer-columna footer-columna-sucursales">
+                        <h3>Nuestras Sucursales</h3>
+                        <p><i class="fas fa-location-dot"></i>Plaza Mundo Apopa, Carr. Troncal del Norte Km 12, Apopa</p>
+                        <p><i class="fas fa-location-dot"></i>Ciudad Delgado Carretera Troncal del Norte Km 6/5, Ciudad Delgado</p>
+                    </div>
+
+                    <div class="footer-columna footer-columna-redes">
+                        <h3>Síguenos</h3>
+                        <div class="redes-sociales-footer">
+                            <a href="https://wa.me/50372887854?text=¡Hola!%20Me%20gustaría%20ordenar%20unas%20fresas%20con%20crema" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                            <a href="https://www.facebook.com/share/1c9cbcK5gX/" aria-label="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+                            <a href="https://www.instagram.com/le_coin_de_la_fraise?igsh=Z292ZjJ0dDlyNTkz" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-columna footer-columna-contacto">
+                        <h3>Contacto</h3>
+                        <p><i class="fas fa-envelope"></i> elrincondelasfresas@gmail.com</p>
+                        <p><i class="fas fa-phone-alt"></i> +503 7288-7854</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-mensaje">
+                <p class="mensaje-texto">🍓Fresas con crema • Hecho con amor • ¡Dulzura en cada bocado!🍓</p>
+                <p class="mensaje-autor">— Le Coin de la Fraise</p>
+            </div>
+        </footer>
+    </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="JS/Registro.js"></script>
+</body>
+</html>
